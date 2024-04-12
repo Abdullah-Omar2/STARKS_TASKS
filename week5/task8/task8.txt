@@ -1,0 +1,7 @@
+int **(*(*ptr)(int x))();
+a pointer to function that takes integer and returns pointer to 
+function that takes void and returns pointer to pointer to integer
+
+void *(*(*N[3])())();
+an array of pointers point to function that takes void and returns 
+pointer to function that takes void and returns generic pointer
