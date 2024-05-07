@@ -1,24 +1,24 @@
 #include <stdio.h>
-#include "array-based-Stack.h"
-void display (Stackentry e);
+#include "array-based-stack.h"
+void display (stackentry e);
 void main ()
 {
-	Stack s;
-	createStack (&s);
-	Stackentry e;
+	stack s;
+	createstack (&s);
+	stackentry e;
 	e.id=123;
 	push (e,&s);
-	printf("%d\n",Stackfull (&s));
-	Stacktop (&e,&s);
+	printf("%d\n",stackfull (&s));
+	stacktop (&e,&s);
 	printf("%d\n",e.id);
 	pop (&e,&s);
 	printf("%d\n",e.id);
-	printf("%d\n",Stackempty (&s));
-	printf("%d\n",Stacksize (&s));
-	clearStack (&s);
-	traverseStack (&s,&display);
+	printf("%d\n",stackempty (&s));
+	printf("%d\n",stacksize (&s));
+	clearstack (&s);
+	traversestack (&s,&display);
 }
-void display (Stackentry e)
+void display (stackentry e)
 {
 	printf("id: %d\n",e.id);
 }

@@ -1,42 +1,42 @@
 #include <stdio.h>
-#include "array-based-Stack.h"
+#include "array-based-stack.h"
 
-void createStack (Stack *ps)
+void createstack (stack *ps)
 {
 	ps->top=0;
 }
-void push (Stackentry e,Stack *ps)
+void push (stackentry e,stack *ps)
 {
 	ps->entry[ps->top++]=e;
 }
-int Stackfull (Stack *ps)
+int stackfull (stack *ps)
 {
-	if (ps->top==MAXStack) return 1;
+	if (ps->top==MAXstack) return 1;
 	else return 0;
 }
-void pop (Stackentry *pe,Stack *ps)
+void pop (stackentry *pe,stack *ps)
 {
 	*pe=ps->entry[--ps->top];
 	
 }
-int Stackempty (Stack *ps)
+int stackempty (stack *ps)
 {
 	if (ps->top==0) return 1;
 	else return 0;
 }
-void Stacktop (Stackentry *pe,Stack *ps)
+void stacktop (stackentry *pe,stack *ps)
 {
 	*pe=ps->entry[ps->top-1];
 }
-int Stacksize (Stack *ps)
+int stacksize (stack *ps)
 {
 	return ps->top;
 }
-void clearStack (Stack *ps)
+void clearstack (stack *ps)
 {
 	ps->top=0;
 }
-void traverseStack (Stack *ps,void (*pf) (Stackentry e))
+void traversestack (stack *ps,void (*pf) (stackentry e))
 {
 	for (int i=ps->top;i>0;i--)
 		pf(ps->entry[i-1]);

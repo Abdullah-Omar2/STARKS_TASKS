@@ -1,27 +1,27 @@
 #ifndef FILE
 #define FILE
 
-#define MAXStack 100
+#define MAXstack 100
 
 typedef struct
 {
 	int id;
-}Stackentry;
+}stackentry;
 
 typedef struct
 {
 	int top;
-	Stackentry entry[MAXStack];
-}Stack;
+	stackentry entry[MAXstack];
+}stack;
 
-void createStack (Stack *ps);
-void push (Stackentry e,Stack *ps);
-int Stackfull (Stack *ps);
-void pop (Stackentry *pe,Stack *ps);
-int Stackempty (Stack *ps);
-void Stacktop (Stackentry *pe,Stack *ps);
-int Stacksize (Stack *ps);
-void clearStack (Stack *ps);
-void traverseStack (Stack *ps,void (*pf) (Stackentry e));
+void createstack (stack *ps);
+void push (stackentry e,stack *ps);
+int stackfull (stack *ps);
+void pop (stackentry *pe,stack *ps);
+int stackempty (stack *ps);
+void stacktop (stackentry *pe,stack *ps);
+int stacksize (stack *ps);
+void clearstack (stack *ps);
+void traversestack (stack *ps,void (*pf) (stackentry e));
 
 #endif
