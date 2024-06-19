@@ -1,17 +1,12 @@
 #ifndef FILE
 #define FILE
 
-#define MAXstack 100
+#include "global.h"
 
-typedef struct
-{
-	int id;
-}stackentry;
-
-typedef struct
+typedef struct 
 {
 	int top;
-	stackentry entry[MAXstack];
+	stackentry entry[MAXSTACK];
 }stack;
 
 void createstack (stack *ps);

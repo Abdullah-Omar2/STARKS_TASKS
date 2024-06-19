@@ -1,10 +1,7 @@
 #ifndef FILE
 #define FILE
 
-typedef struct
-{
-	int id;
-}queueentry;
+#include "global.h"
 
 typedef struct queuenode
 {
@@ -12,7 +9,7 @@ typedef struct queuenode
 	struct queuenode *next;
 }queuenode;
 
-typedef struct
+typedef struct 
 {
 	queuenode *front;
 	queuenode *rear;

@@ -1,18 +1,15 @@
 #ifndef FILE
 #define FILE
 
-typedef struct
-{
-	int id;
-}stackentry;
+#include "global.h"
 
-typedef struct Stacknode
+typedef struct stacknode 
 {
 	stackentry entry;
-	struct Stacknode *next;
+	struct stacknode *next;
 }stacknode;
 
-typedef struct
+typedef struct 
 {
 	stacknode *top;
 }stack;

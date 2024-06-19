@@ -1,14 +1,9 @@
 #ifndef FILE
 #define FILE
 
-#define MAXQUEUE 100
+#include "global.h"
 
-typedef struct
-{
-	int id;
-}queueentry;
-
-typedef struct
+typedef struct 
 {
 	int front;
 	int rear;

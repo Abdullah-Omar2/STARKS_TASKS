@@ -11,7 +11,7 @@ void push (stackentry e,stack *ps)
 }
 int stackfull (stack *ps)
 {
-	if (ps->top==MAXstack) return 1;
+	if (ps->top==MAXSTACK) return 1;
 	else return 0;
 }
 void pop (stackentry *pe,stack *ps)
