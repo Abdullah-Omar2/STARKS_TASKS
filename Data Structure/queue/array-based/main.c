@@ -3,18 +3,22 @@
 void display (queueentry e);
 void main ()
 {
-	queue s;
-	createqueue (&s);
+	queue q;
+	createqueue (&q);
 	queueentry e;
 	e.id=123;
-	append (e,&s);
-	printf("%d\n",queuefull (&s));
-	serve (&e,&s);
+	append (e,&q);
+	append (e,&q);
+	append (e,&q);
+	append (e,&q);
+	traversequeue (&q,&display);
+	printf("%d\n",queuefull (&q));
+	serve (&e,&q);
 	printf("%d\n",e.id);
-	printf("%d\n",queueempty (&s));
-	printf("%d\n",queuesize (&s));
-	clearqueue (&s);
-	traversequeue (&s,&display);
+	printf("%d\n",queueempty (&q));
+	printf("%d\n",queuesize (&q));
+	clearqueue (&q);
+	printf("%d\n",queueempty (&q));
 }
 void display (queueentry e)
 {

@@ -1,5 +1,5 @@
-#ifndef FILE
-#define FILE
+#ifndef LSTACK
+#define LSTACK
 
 #include "global.h"
 

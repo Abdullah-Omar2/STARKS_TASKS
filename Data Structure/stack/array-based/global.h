@@ -1,3 +1,6 @@
+#ifndef GLOBAL
+#define GLOBAL
+
 typedef struct
 {
 	int id;
@@ -11,4 +14,5 @@ typedef elementtype queueentry;
 typedef elementtype stackentry;
 #define MAXSTACK MAXELEMENT 
 
+#endif
 

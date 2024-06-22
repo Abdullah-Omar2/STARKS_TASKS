@@ -1,5 +1,5 @@
-#ifndef FILE
-#define FILE
+#ifndef AQUEUE
+#define AQUEUE
 
 #include "global.h"
 

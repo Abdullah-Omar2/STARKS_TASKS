@@ -40,7 +40,7 @@ void clearqueue (queue *pq)
 void traversequeue (queue *pq,void (*pf) (queueentry e))
 {
 	int pos,s;
-	for (pos=pq->front,s=0;s>pq->size;s++)
+	for (pos=pq->front,s=0;s<pq->size;s++)
 	{
 		pf(pq->entry[pos]);
 	    pos=(pos+1)%MAXQUEUE;

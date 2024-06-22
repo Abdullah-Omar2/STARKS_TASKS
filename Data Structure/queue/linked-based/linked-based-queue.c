@@ -17,8 +17,8 @@ void append (queueentry e,queue *pq)
 	else
 	{
 		pq->rear->next=pn;
-	    pq->rear=pn;
 	}
+	pq->rear=pn;
 	pq->size++;
 }
 int queuefull (queue *pq)

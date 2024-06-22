@@ -8,6 +8,10 @@ void main ()
 	stackentry e;
 	e.id=123;
 	push (e,&s);
+	push (e,&s);
+	push (e,&s);
+	push (e,&s);
+	traversestack (&s,&display);
 	printf("%d\n",stackfull (&s));
 	stacktop (&e,&s);
 	printf("%d\n",e.id);
@@ -16,7 +20,7 @@ void main ()
 	printf("%d\n",stackempty (&s));
 	printf("%d\n",stacksize (&s));
 	clearstack (&s);
-	traversestack (&s,&display);
+	printf("%d\n",stackempty (&s));
 }
 void display (stackentry e)
 {

@@ -1,5 +1,5 @@
-#ifndef FILE
-#define FILE
+#ifndef ASTACK
+#define ASTACK
 
 #include "global.h"
 
