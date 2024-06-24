@@ -5,6 +5,7 @@
 void createstack (stack *ps)
 {
 	ps->top=NULL;
+	ps->size=0;
 }
 void push (stackentry e,stack *ps)
 {
@@ -12,6 +13,7 @@ void push (stackentry e,stack *ps)
 	pn->entry=e;
 	pn->next=ps->top;
 	ps->top=pn;
+	ps->size++;
 }
 int stackfull (stack *ps)
 {
@@ -24,6 +26,7 @@ void pop (stackentry *pe,stack *ps)
 	pn=ps->top;
 	ps->top=ps->top->next;
 	free(pn);
+	ps->size--;
 }
 int stackempty (stack *ps)
 {
@@ -36,10 +39,7 @@ void stacktop (stackentry *pe,stack *ps)
 }
 int stacksize (stack *ps)
 {
-	int x;
-	stacknode *pn=ps->top;
-	for (x=0;pn;pn=pn->next)x++;
-	return x;
+	return ps->size;
 }
 void clearstack (stack *ps)
 {
@@ -50,6 +50,7 @@ void clearstack (stack *ps)
 		free(ps->top);
 		ps->top=pn;
 	}
+	ps->size=0;
 }
 void traversestack (stack *ps,void (*pf) (stackentry e))
 {

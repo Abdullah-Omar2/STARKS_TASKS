@@ -12,6 +12,7 @@ typedef struct stacknode
 typedef struct 
 {
 	stacknode *top;
+	int size;
 }stack;
 
 void createstack (stack *ps);

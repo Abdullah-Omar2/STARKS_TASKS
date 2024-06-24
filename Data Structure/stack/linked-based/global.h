@@ -14,5 +14,8 @@ typedef elementtype queueentry;
 typedef elementtype stackentry;
 #define MAXSTACK MAXELEMENT 
 
+typedef elementtype listentry;
+#define MAXLIST MAXELEMENT 
+
 #endif
 

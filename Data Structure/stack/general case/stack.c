@@ -13,12 +13,14 @@ typedef struct stacknode
 struct stack
 {
 	stacknode *top;
+	int size;
 };
 
 void createstack (pstack *pps)
 {
 	*pps=(struct stack *)malloc(sizeof(struct stack));
 	(*pps)->top=NULL;
+	(*pps)->size=0;
 }
 void push (stackentry e,pstack ps)
 {
@@ -26,6 +28,7 @@ void push (stackentry e,pstack ps)
 	pn->entry=e;
 	pn->next=ps->top;
 	ps->top=pn;
+	ps->size++;
 }
 int stackfull (pstack ps)
 {
@@ -38,6 +41,7 @@ void pop (stackentry *pe,pstack ps)
 	pn=ps->top;
 	ps->top=ps->top->next;
 	free(pn);
+	ps->size--;
 }
 int stackempty (pstack ps)
 {
@@ -50,10 +54,7 @@ void stacktop (stackentry *pe,pstack ps)
 }
 int stacksize (pstack ps)
 {
-	int x;
-	stacknode *pn=ps->top;
-	for (x=0;pn;pn=pn->next)x++;
-	return x;
+	return ps->size;
 }
 void clearstack (pstack *pps)
 {
@@ -64,6 +65,7 @@ void clearstack (pstack *pps)
 		free((*pps)->top);
 		(*pps)->top=pn;
 	}
+	(*pps)->size=0;
 }
 void traversestack (pstack ps,void (*pf) (stackentry e))
 {

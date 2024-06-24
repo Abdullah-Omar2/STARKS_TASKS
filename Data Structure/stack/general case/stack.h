@@ -1,7 +1,7 @@
 #ifndef STACK
 #define STACK
 
-//#define LIMITED_MEMORY      
+#define LIMITED_MEMORY      
 
 #include "global.h"
 
